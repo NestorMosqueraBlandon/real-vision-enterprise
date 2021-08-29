@@ -82,10 +82,10 @@ export default function Team() {
 
                                     <div className={founder.socialmedia}>
                                         <Link href="/">
-                                        <a><i class='bx bxl-linkedin'></i></a>
+                                        <a><i className='bx bxl-linkedin'></i></a>
                                         </Link>
                                         <Link href="/">
-                                        <a ><i class='bx bxl-instagram' ></i></a>
+                                        <a ><i className='bx bxl-instagram' ></i></a>
                                         </Link>
                                     </div>
                                     <p>{name}</p>
