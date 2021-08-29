@@ -1,0 +1,23 @@
+.sectionsholder{
+    display: block;
+    background: linear-gradient(180deg, #F9FAFB 0%, #EDF1F2 100%);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: .9s ease;
+}
+.sectionsholderscroll{
+    display: block;
+    background: linear-gradient(180deg, #F9FAFB 0%, #EDF1F2 100%);
+    height: 100%;
+    width: 100vw;
+    /* overflow: hidden; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: .9s ease;
+}
+

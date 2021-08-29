@@ -1,0 +1,56 @@
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    top: 0px;
+    padding: 1rem 0;
+    width: 100vw;
+    height: 48px;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    z-index: 99;
+    background: #F9FAFB;
+}
+
+
+.logo{
+    justify-self: flex-start;
+    margin-left: 1.5rem;
+    height: 3.8rem;
+    width: 3.7rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+}
+
+.menu{
+    margin-right: 1.5rem;
+    justify-self: end;
+    transform: translateY(14px);
+}
+
+.menubaruno{
+    height: .1rem;
+    width: 2.5rem;
+    background-color: #8596AD;
+    transition: .3s ease;
+    margin-bottom: .9rem;
+}
+
+.menubardos{
+    height: .1rem;
+    width: 2.5rem;
+    background-color: #8596AD;
+    transition: .3s ease;
+}
+
+.headerpivot{
+    display: none;
+}
