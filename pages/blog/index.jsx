@@ -13,7 +13,7 @@ export default function Index({data}) {
             <h2 className="title">BLOG</h2>
             {
                 data.map(({id, title, body}) => (
-                    <BlogCard id={id} title={title} body={body} img={backimg} />
+                    <BlogCard key={id} id={id} title={title} body={body} img={backimg} />
 
                 ))
             }

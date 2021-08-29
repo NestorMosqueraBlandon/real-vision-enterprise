@@ -4,6 +4,7 @@ import section from '../styles/Section.module.css'
 import founder from '../styles/Founder.module.css'
 import about from "../styles/About.module.css"
 import Image from 'next/image'
+import Link from 'next/link'
 
 const data = [
     {
@@ -80,8 +81,12 @@ export default function Team() {
                                 <div className={founder.right}>
 
                                     <div className={founder.socialmedia}>
-                                        <a href="/"><i class='bx bxl-linkedin'></i></a>
-                                        <a href="/"><i class='bx bxl-instagram' ></i></a>
+                                        <Link href="/">
+                                        <a><i class='bx bxl-linkedin'></i></a>
+                                        </Link>
+                                        <Link href="/">
+                                        <a ><i class='bx bxl-instagram' ></i></a>
+                                        </Link>
                                     </div>
                                     <p>{name}</p>
                                     <h2>{title}</h2>
