@@ -43,14 +43,14 @@ export default function Layout({ children, title, description, scroll }) {
                 <div className={!openMenu ? header.menucontent : header.menucontentopen}>
                     <div className={header.menulinks}>
                         <div className={header.pageone}>
-                            <i class='bx bx-chevron-right' ></i>
+                            <i className='bx bx-chevron-right' ></i>
                             <p><a href="/">Home</a></p>
                         </div>
                     </div>
                     <div className={header.menucontact}>
-                        <a href="mailto:hi@rvegeneral.com"><i class='bx bx-chevron-right' ></i> <p>hi@rvegeneral.com</p></a>
-                        <a href="tel:+573148335345"><i class='bx bx-chevron-right' ></i>  <p> +57 3148335345</p></a>
-                        <a href="https://goo.gl/maps/8VfDrMoDQbmUJ4vT8"><i class='bx bx-chevron-right' ></i>  <p> Medellin, Colombia</p></a>
+                        <a href="mailto:hi@rvegeneral.com"><i className='bx bx-chevron-right' ></i> <p>hi@rvegeneral.com</p></a>
+                        <a href="tel:+573148335345"><i className='bx bx-chevron-right' ></i>  <p> +57 3148335345</p></a>
+                        <a href="https://goo.gl/maps/8VfDrMoDQbmUJ4vT8"><i className='bx bx-chevron-right' ></i>  <p> Medellin, Colombia</p></a>
                     </div>
                 </div>
             </header>

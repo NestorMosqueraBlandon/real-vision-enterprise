@@ -43,7 +43,7 @@ export default function About() {
             <div className={openModal? modal.modal : modal.modalopen}>
                 <div className={modal.modalcard}>
                     <div className={modal.header}>
-                    <i onClick={() => setOpenModal(!openModal)} class='bx bx-x'></i>
+                    <i onClick={() => setOpenModal(!openModal)} className='bx bx-x'></i>
                     <h2>NEWSLETTER</h2>
                     <div></div>
                     </div>
