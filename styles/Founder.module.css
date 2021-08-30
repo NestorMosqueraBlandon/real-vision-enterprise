@@ -152,3 +152,42 @@
     margin: 0;
     padding: 0;
 }
+
+@media screen and (min-width: 900px) {
+    .about{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .aboutcontent{
+        justify-self: end;
+        align-self: center;
+    }
+
+    
+    .abouttext{
+        width: 458px;
+        padding-right: 15px;
+    }
+
+    .about h2{
+        font-size: 3.2rem;
+        transition: .5s ease 0s;
+    }
+
+    .about p{
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        font-weight: 300;
+        margin-bottom: 2.8rem;
+    }
+
+    .missionimgpng{
+        display: block;
+        width: 650px;
+    }
+    
+    .missionimgpng img{
+        width: 100%;
+    }
+
+}

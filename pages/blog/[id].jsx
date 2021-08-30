@@ -3,8 +3,8 @@ import Layout from "../../components/Layout";
 export default function post({data}) {
     return (
         <Layout title={data.title}>
-            <h1>{data.id} = {data.title}</h1>
-            <p>{data.body}</p>
+            <h2 className="title">{data.title}</h2>
+            <p className="body">{data.body}</p>
         </Layout>
     )
 }

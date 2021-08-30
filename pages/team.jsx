@@ -5,7 +5,20 @@ import founder from '../styles/Founder.module.css'
 import about from "../styles/About.module.css"
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
+import es from '../locales/es';
+import en from '../locales/en';
+
+
+
+export default function Team() {
+    
+    const router = useRouter();
+    const {locale} = router;
+    const t = locale == 'en'? en : es
+
+    
 const data = [
     {
         url: "/img/cto.png",
@@ -39,30 +52,30 @@ const data = [
     }
 ]
 
-export default function Team() {
+
     return (
         <Layout
-        title="Team | Real Vision Enterprise"
+        title={`${t.team} | Real Vision Enterprise`}
         >
             <div className={section.mainsections}>
                 <div className={founder.about}>
                     <div className={about.aboutcontent}>
                         <div className={about.abouttext}>
-                            <h2>Team</h2>
+                            <h2>{t.team}</h2>
                             <p>
-                                Our founding team and executive management are pioneers in developing next-generation technology solutions.
-
+                                {t.p5}
                             </p>
                             <p >
-                                We are environmental, engineers,
-                                technicians and researchers.
+                                {t.p6}
                             </p>
                             <p >
-                            But perhaps most importantly, we all have people in our lives who have been shocked by technology.
+                                {t.p7}
                             </p>
                         </div>
 
                     </div>
+                    <div className="container-card">
+
                     <Slider
                         onSlideComplete={(i) => {
                             console.log('finished dragging, current slide is', i)
@@ -74,7 +87,7 @@ export default function Team() {
                         threshHold={100}
                         transition={0.5}
                         scaleOnDrag={true}
-                    >
+                        >
                         {data.map(({ url, title, name }, index) => (
                             <div key={index} className={founder.teamimg}>
                                 <Image src={url} alt={title} width={100} height={100} />
@@ -94,6 +107,7 @@ export default function Team() {
                             </div>
                         ))}
                     </Slider>
+                        </div>
 
                 </div>
 

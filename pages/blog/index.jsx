@@ -11,15 +11,18 @@ export default function Index({data}) {
         title="Blog | Real Vision Enterprise"
         scroll>
             <h2 className="title">BLOG</h2>
-            {
+            <div className="container">
+
+                {
                 data.map(({id, title, body}) => (
                     <BlogCard key={id} id={id} title={title} body={body} img={backimg} />
-
-                ))
-            }
-            <Link href="/">
+                    
+                    ))
+                }
+            </div>
+            {/* <Link href="/">
                 <a>Volver al inicio</a>
-            </Link>
+            </Link> */}
         </Layout>
     )
 }

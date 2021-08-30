@@ -1,8 +1,21 @@
+import { useRouter } from "next/router";
 import Layout from "../components/Layout"
 import about from "../styles/About.module.css"
+import modal from "../styles/Modal.module.css"
 import section from '../styles/Section.module.css'
 
+import en from '../locales/en';
+import es from '../locales/es';
+import { useState } from "react";
+
 export default function About() {
+    
+    const [openModal, setOpenModal] = useState(false)
+
+    const router = useRouter();
+    const {locale} = router;
+    const t = locale == 'en'? en : es
+    
     return (
         <Layout
             title="About | Real Vision Enterprise"
@@ -12,18 +25,32 @@ export default function About() {
                 <div className={about.about}>
                     <div className={about.aboutcontent}>
                         <div className={about.abouttext}>
-                            <h2>ABOUT</h2>
-                            <p>Across CO, America, North America, and Europe there are nearly 200 million people. More than 60 percent of people prefer to rely on technology to solve problems. However, they reject current alternatives to do just that.</p>
+                            <h2>{t.about}</h2>
+                            <p>{t.p1}</p>
                             <p >
-                            We believe that there is an opportunity to create a new category of technologically approved products that is much closer to experience based on, to the satisfaction of people, with an environmental standard free of elements that harm human beings.
+                            {t.p2}
                             </p>
                             <div className="newsletter">
-                                <div className={about.newsletterbtn}>
-                                    <span className="newsletter-btn-text">Join our Newsletter <i className='bx bx-chevron-right'></i></span>
+                                <div className={about.newsletterbtn} onClick={() => setOpenModal(!openModal)}>
+                                    <span className="newsletter-btn-text">{t.b1} <i className='bx bx-chevron-right'></i></span>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div className={openModal? modal.modal : modal.modalopen}>
+                <div className={modal.modalcard}>
+                    <div className={modal.header}>
+                    <i onClick={() => setOpenModal(!openModal)} class='bx bx-x'></i>
+                    <h2>NEWSLETTER</h2>
+                    <div></div>
+                    </div>
+                    <form action="">
+                        <input className={modal.input} type="email" placeholder="Email" />
+                        <input className={modal.submit} type="submit" value="Send" />
+                    </form>
                 </div>
             </div>
         </Layout>
