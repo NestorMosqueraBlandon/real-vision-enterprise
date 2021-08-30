@@ -44,7 +44,11 @@ export default function Layout({ children, title, description, scroll }) {
                     <div className={header.menulinks}>
                         <div className={header.pageone}>
                             <i className='bx bx-chevron-right' ></i>
-                            <p><a href="/">Home</a></p>
+                            <p>
+                                <Link href="/">
+                                    <a>Home</a>
+                                </Link>
+                            </p>
                         </div>
                     </div>
                     <div className={header.menucontact}>
